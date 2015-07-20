@@ -1,0 +1,26 @@
+//COM 5 is connected
+
+void setup() { //function SETUP, type VOID
+  pinMode(13, OUTPUT);//Capital : Definition of macro
+  pinMode(12, OUTPUT);
+  pinMode(7, OUTPUT);
+  digitalWrite(4, HIGH);
+}
+void loop() {
+  int v = digitalRead(4);
+  if(v){
+    digitalWrite(13, HIGH);
+    delay(200);
+    digitalWrite(13, LOW);
+    digitalWrite(12, HIGH);
+    delay(200);
+    digitalWrite(12, LOW);
+    digitalWrite(7, HIGH);
+    delay(200);
+    digitalWrite(7, LOW);
+  }else{
+    digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    digitalWrite(7, LOW);
+  } 
+}
