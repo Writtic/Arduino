@@ -1,0 +1,14 @@
+void setup() {
+  Serial.begin(9600);
+  digitalWrite(4, HIGH);
+  
+}
+void loop() {
+  // put your main code here, to run repeatedly:
+  int a = digitalRead(4);
+  Serial.print(a);  //ln을 붙이면 잠재적으로 0값이 날아가 색상이 깜빡거린다.
+  delay(100);
+  if(Serial.available()){
+    Serial.write(a);
+  }
+}
