@@ -6,10 +6,12 @@ void setup(){
   port = new Serial(this, Serial.list()[2], 9600);
 }
 void draw(){
-  int temp=port.read();
-  translate(300,300,0); 
-  sphere(150); 
-  if((char)temp=='0'){stroke(255,0,0);}
-  else {stroke(0, 0, 0);}
-
+  if(port.available()>0){
+    int temp=port.read();
+    translate(300,300,0); 
+    sphere(150); 
+    print((char)temp);
+    if((char)temp=='0'){stroke(255,0,0);}
+    else {stroke(0, 0, 0);}
+  }
 }
