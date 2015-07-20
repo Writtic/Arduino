@@ -1,0 +1,12 @@
+//COM 5 is connected
+
+
+void setup() { //function SETUP, type VOID
+  pinMode(13, OUTPUT);//Capital : Definition of macro
+}
+void loop() {
+  digitalWrite(13, HIGH); //Turn on the LED
+  delay(2000); //1 Second
+  digitalWrite(13, LOW); //Turn off the LED
+  delay(2000); //1 Second
+}
